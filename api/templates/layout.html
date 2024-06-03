@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="../static/layout.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <h1 class="logo">Pegasus</h1>
+                </div>
+                <ul>
+                    <li><a class="shadow__btn" href="{{ url_for('index') }}">Home</a></li>
+                    <li><a class="shadow__btn" href="{{ url_for('posts') }}">Posts</a></li>
+                    <li><a class="shadow__btn" href="#">Genre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2024 Pegasus. All rights not reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
