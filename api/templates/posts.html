@@ -1,0 +1,34 @@
+
+    
+
+{% extends "layout.html" %}
+
+{% block title %}Posts - My Flask App{% endblock %}
+
+{% block content %}
+<style>
+
+
+
+
+</style>
+<h1>Posts</h1>
+<div class="grid-container">
+    {% for post in posts %}
+    <div class="grid-item">
+        <a href="{{ url_for(post['filename'] + '_so') }}" class="linkOfGridItem">{{ post['Name'] }}</a>      
+        <img src="{{ post['Thumbimage_src'] }}" alt="{{ post['Name'] }}" >
+
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block styles %}
+<style>
+  
+    
+</style>
+{% endblock %}
+
+<link rel="stylesheet" href="../static/layout.css">

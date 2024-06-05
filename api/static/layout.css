@@ -1,0 +1,413 @@
+/* Define theme variables */
+:root {
+  --text: #e2dcf5;
+  --background: #06040d;
+  --primary: rgb(52, 205, 156);
+  --secondary: #8a285b;
+  --accent: #d15f67;
+}
+
+.container{
+  margin: 0;
+  padding:0;
+  height: fit-content;
+  width: 100%;
+}
+
+
+
+
+
+/* Basic styling for the navigation bar */
+.navbar {
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--accent);
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+}
+
+
+
+.shadow__btn {
+  text-align: center;
+  margin: 0 15px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--text);
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary);
+  box-shadow: 0 0 5px rgba(107, 184, 0, 0.3), 0 0 10px rgba(67, 59, 255, 0.2);
+}
+
+.shadow__btn:hover {
+  background-color: var(--accent);
+  box-shadow: 0 0 10px rgba(67, 59, 255, 0.6), 0 0 20px rgba(67, 59, 255, 0.4);
+}
+
+.shadow__btn:active {
+  background-color: var(--accent);
+  box-shadow: 0 0 20px rgba(67, 59, 255, 0.8), 0 0 30px rgba(67, 59, 255, 0.6);
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--background);
+  color: var(--text);
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer .footer-info { 
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    align-items: right;
+  }
+
+  .navbar ul {
+    margin-top: 20px;
+  }
+
+  .navbar .logo-container {
+    margin-bottom: 20px;
+  }
+
+  .shadow__btn {
+    margin: 10px 0;
+  }
+
+  footer .footer-links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Adjusting iframe width for smaller screens */
+  .if {
+    width: 50%;
+    margin: 0 auto;
+    height: max-content;
+    display: block;
+    overflow: hidden;
+  }
+
+  .ifrc{
+    display: block;
+    overflow: hidden;
+  }
+  /* Stacking server links vertically on smaller screens */
+  .listserver {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* General Body Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+background-color: var(--background);
+  color: var(--text);
+}
+
+/* Post styles */
+.listserver{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* This ensures that items will wrap to the next line if needed */
+  gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.serverlink { /* Green background */
+  border: none; /* Remove borders */
+ /* White text */
+  padding: 15px 32px; /* Some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the buttons inline-block */
+  font-size: 16px; /* Increase font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Pointer/hand icon on hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.lbox{
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .lbox a {
+    display: block;
+    width: 80%;
+  }
+}
+
+.ifrc{
+  overflow: hidden;
+}
+
+.columnb{
+  overflow: hidden;
+}
+
+a{
+  font-family: Poppins;
+}
+
+
+/* this is d*
+
+/* this button is inspired from this -- s://www.newline.co/pricing */
+.button {
+  text-align:center;
+    --width: 150px;
+    --timing: 2s;
+    border: 0;
+    width: var(--width);
+    padding-block: 1em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    background: rgb(64, 192, 87);
+    transition: all 0.2s;
+    border-radius: 3px;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rempx;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .button:hover {
+    background-image: linear-gradient(
+      to right,
+      rgb(250, 82, 82),
+      rgb(250, 82, 82) 16.65%,
+      rgb(190, 75, 219) 16.65%,
+      rgb(190, 75, 219) 33.3%,
+      rgb(76, 110, 245) 33.3%,
+      rgb(76, 110, 245) 49.95%,
+      rgb(64, 192, 87) 49.95%,
+      rgb(64, 192, 87) 66.6%,
+      rgb(250, 176, 5) 66.6%,
+      rgb(250, 176, 5) 83.25%,
+      rgb(253, 126, 20) 83.25%,
+      rgb(253, 126, 20) 100%,
+      rgb(250, 82, 82) 100%
+    );
+    animation: var(--timing) linear dance6123 infinite;
+    transform: scale(1.1) translateY(-1px);
+  }
+  
+  @keyframes dance6123 {
+    to {
+      background-position: var(--width);
+    }
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgb(23, 213, 197);
+}
+
+
+.grid-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 200px;
+  height: 264px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.grid-item::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.grid-item a{
+  color: rgb(0, 0, 0);
+  padding: 0%;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+text-decoration-style: none;
+font-size: 2.2em;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+margin: 10px 0;
+height: 60px; /* Fixed height */
+overflow: hidden; /* Hide */
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: rgb(34, 176, 223);
+
+}
+
+.grid-item img{
+  border-radius: 12px;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  height: 150px;
+ /* Fixed height */
+  object-fit:cover; /* Ensure the image covers the area without stretching */
+
+}
+
+
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+
+
+.grid-item p:not(.heading) {
+  font-size: 14px;
+}
+
+.grid-item p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.grid-item:hover::after {
+  filter: blur(30px);
+}
+
+.grid-item:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+
+
+
+.homePageButton {
+  cursor: pointer
+  ;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.homePageButton:active{
+  color: var(--accent);
+}
+
+.navbar .logo-container {
+  align-items: center;
+}
+
+.navbar .logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.navbar .logo  a{
+  text-decoration: none;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: fit-content;
+  }
+}
