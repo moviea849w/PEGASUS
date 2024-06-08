@@ -1,0 +1,90 @@
+/* post.css */
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.iframe-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.iframe-container .if {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.server-list-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.listserver {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.listserver li {
+    margin: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    background: linear-gradient(-45deg, #e81cff, #40c9ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(-45deg, #40c9ff, #e81cff);
+}
+
+.data-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.data-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data-item:hover {
+    transform: translateY(-5px);
+}
+
+.data-item img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.data-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.data-item p {
+    margin-bottom: 5px;
+}
+
+/* Ensures text is visible against the background */
+.data-item h3,
+.data-item p {
+    color: #333; /* Dark text color */
+}
