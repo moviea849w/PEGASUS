@@ -1,16 +1,13 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    const listItems = document.querySelectorAll("#listOfServers li");
+    var serverLinks = document.querySelectorAll(".listserver a");
 
-    listItems.forEach(item => {
-        const link = item.querySelector("a");
-        const href = link.getAttribute("href").trim();
-
-        if (href === "" || href === "#") {
-            item.remove();
+    serverLinks.forEach(function(link) {
+        var href = link.getAttribute("href");
+        if (!href || href.trim() === "" || href === "#" || href === "null") {
+            // If the href is empty, whitespace, null, or '#', hide the parent <li> element
+            var listItem = link.parentElement;
+            listItem.style.display = "none";
         }
     });
-}); 
+});
 
